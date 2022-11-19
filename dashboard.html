@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheques Submitted</title>
+    <script src="https://kit.fontawesome.com/3936bbff8e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="./main.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <img src="./media/bvs.png" id="upper-logo" style="width:100px;" />
+    </nav>
+    <div id="inner-main-container">
+        <section class="page p-0 container-fluid">
+            <div class="row h-100">
+                <div style="width:24%" class="d-inline-block m-auto text-center fs-3 text-capitalize pt-2 pb-2 bg-primary text-light">Statistics</div>
+                <div style="width:24%" class="d-inline-block m-auto text-center fs-3 text-capitalize pt-2 pb-2">EG-CCH Reports</div>
+                <div style="width:24%" class="d-inline-block m-auto text-center fs-3 text-capitalize pt-2 pb-2">Broadcasts</div>
+                <div style="width:24%" class="d-inline-block m-auto text-center fs-3 text-capitalize pt-2 pb-2">Settlements</div>
+            </div>
+        </section>
+        <section class="page page-1 mb-5 m-auto">
+            <header class="text-primary fs-1">Filter</header>
+            <section class="page-body container-fluid">
+                <div class="row mt-5">
+                    <div class="col-5">
+                        <div class="label fs-3 ml-3 mt-1 mb-1">From <span class="text-danger">*</span></div>
+                        <div>
+                            <input type="date" class="fs-4 ml-5 w-85 pt-1 pb-1 " />
+                            <i class="fa-solid fa-chevron-down fs-4 w-15"></i>
+                            <div class="p-1 mt-1 bg-primary ml-5  rounded-pill fw-light horizontal-line"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-5">
+                        <div class="label fs-3 ml-3 mt-1 mb-1">To <span class="text-danger">*</span></div>
+                        <div>
+                            <input type="date" class="fs-4 ml-5  pt-1 pb-1 w-85 " />
+                            <i class="fa-solid fa-chevron-down fs-4 w-15"></i>
+                            <div class="p-1 mt-1 bg-primary ml-5  rounded-pill fw-light horizontal-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-5">
+                        <div class="label fs-3 ml-3 mt-1 mb-1">Customer Type</div>
+                        <div>
+                            <div class="position-relative d-inline-block ml-5 w-85 list">
+                                <input type="text" class="fs-4 ml-5 pt-1 pb-1 list-header position-relative " />
+                                <div class="list-body position-absolute bg-light hidden">
+                                    <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Retail</div>
+                                    <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">SME</div>
+                                    <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Corporate
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-chevron-down fs-4 w-15"></i>
+                            <div class="p-1 mt-1 bg-primary ml-5  rounded-pill fw-light horizontal-line"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-5">
+                        <div class="label fs-3 ml-3 mt-1 mb-1">Customer Segment</div>
+                        <div>
+                            <div class="position-relative d-inline-block ml-5 w-85 list">
+                                <input type="text" class="fs-4 ml-5 pt-1 pb-1 list-header position-relative " />
+                                <div class="list-body position-absolute bg-light hidden">
+                                    <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Classic</div>
+                                    <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">VIP</div>
+                                    <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Advanced
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-chevron-down fs-4 w-15"></i>
+                            <div class="p-1 mt-1 bg-primary ml-5  rounded-pill fw-light horizontal-line"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row mt-5 d-flex justify-content-end">
+                    <button
+                        class="col-2 m-2 bg-light border border-primary text-primary fs-3 p-5 pt-2 pb-2 rounded-pill"
+                        id="page-1-clear">Clear</button>
+                    <button class="col-2 m-2 bg-primary text-light fs-3 p-5 pt-2 pb-2 rounded-pill"
+                        id="page-1-filter">Filter</button>
+                </div>
+            </section>
+        </section>
+        <section class="page page-2 mb-5 m-auto hidden">
+            <header class="text-primary fs-1 container-fluid">
+                <div class="row mt-5">
+                    <div class="col-3 active" id="submitted">
+                        <h1>Submitted</h1>
+                        <div class="p-1 mt-1 bg-primary  rounded-pill fw-light horizontal-line"></div>
+                    </div>
+                    <div class="col-3" id="received">
+                        <h1 class="text-center">Received</h1>
+                        <div class="p-1 mt-1 bg-primary  rounded-pill fw-light horizontal-line d-none"></div>
+                    </div>
+                </div>
+
+            </header>
+            <section class="page-body container-fluid">
+                <div class="row mt-5">
+                    <div class="col-5">
+                        <div class="label fs-3 ml-3 mt-1 mb-1">From Branch</div>
+                        <div>
+                            <div class="position-relative d-inline-block ml-5 w-85 list">
+                                <input type="text" class="fs-4 ml-5 pt-1 pb-1 list-header position-relative " />
+                                <div class="list-body position-absolute bg-light hidden">
+                                    <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Nasr City
+                                    </div>
+                                    <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">El-Manial
+                                    </div>
+                                    <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Down Town
+                                    </div>
+                                    <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">El-Haram
+                                    </div>
+                                    <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">New Cairo
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-chevron-down fs-4 w-15"></i>
+                            <div class="p-1 mt-1 bg-primary ml-5  rounded-pill fw-light horizontal-line"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-7">
+                        <div class="label fs-3 ml-3 mt-1 mb-1">Amount</div>
+                        <div class="d-flex">
+                            <div class=" col-3 d-flex justify-content-center ">
+                                <div class="position-relative d-inline-block ml-5 w-85 list">
+                                    <input type="text" class="fs-4 ml-5 pt-1 pb-1 list-header position-relative " />
+                                    <div class="list-body position-absolute bg-light hidden">
+                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">></div>
+                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">
+                                            &#60; </div>
+                                                <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">=
+                                                </div>
+                                        </div> 
+                                    </div>
+                                    <i class="fa-solid fa-chevron-down fs-4 w-15"></i>
+
+                                </div>
+
+
+                                <div class="d-inline-block ml-5">
+                                    <input type="text" class="fs-4 ml-5  pt-1 pb-1 w-50 " />
+                                    <div class="p-1 mt-1 bg-primary ml-1   rounded-pill fw-light horizontal-line"></div>
+                                </div>
+                            </div>
+                            <div class="p-1 mt-1 bg-primary ml-5  rounded-pill fw-light horizontal-line w-25 col-3 position-relative"
+                                style="top: -7px;"></div>
+
+                        </div>
+
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-5">
+                            <div class="label fs-3 ml-3 mt-1 mb-1">Customer CIF</div>
+                            <div>
+                                <input type="text" class="fs-4 ml-5 w-85 pt-1 pb-1 " />
+                                <div class="p-1 mt-1 bg-primary ml-5  rounded-pill fw-light horizontal-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-5">
+                            <div class="label fs-3 ml-3 mt-1 mb-1">Status</div>
+                            <div>
+                                <div class="position-relative d-inline-block ml-5 w-85 list">
+                                    <input type="text" class="fs-4 ml-5 pt-1 pb-1 list-header position-relative " />
+                                    <div class="list-body position-absolute bg-light hidden">
+                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">In
+                                            Progress</div>
+                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Submitted
+                                        </div>
+                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Returned
+                                        </div>
+                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Collected
+                                        </div>
+                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Paid
+                                        </div>
+                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">
+                                            Re-presented</div>
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-chevron-down fs-4 w-15"></i>
+                                <div class="p-1 mt-1 bg-primary ml-5  rounded-pill fw-light horizontal-line"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row mt-5 d-flex justify-content-end">
+                        <button
+                            class="z-100 col-2 m-2 bg-light border border-primary text-primary fs-3 p-5 pt-2 pb-2 rounded-pill"
+                            id="page-2-clear">Clear</button>
+                        <button class="col-2 m-2 bg-primary text-light fs-3 p-5 pt-2 pb-2 rounded-pill"
+                            id="page-2-filter">Filter</button>
+                    </div>
+            </section>
+        </section>
+        <section class="page page-3 hidden mt-5 m-auto">
+            <table class="w-100">
+                <tr>
+                    <th>Cheque Number</th>
+                    <th>Submission Date</th>
+                    <th>To Bank</th>
+                    <th>Beni. CIF</th>
+                    <th>Account</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Chq_12123_Front</td>
+                    <td>06-12-22_11:21</td>
+                    <td>El Rehab </td>
+                    <td>3434334</td>
+                    <td>453543534552</td>
+                    <td>In Progress</td>
+                    <td><a href="#">Open</a></td>
+                </tr>
+                <tr>
+                    <td>Chq_23008_Front</td>
+                    <td>09-11-22_11:21</td>
+                    <td>Down Town </td>
+                    <td>3234556</td>
+                    <td>09872288034</td>
+                    <td>Submitted</td>
+                    <td><a href="#">Open</a></td>
+                </tr>
+                <tr>
+                    <td>Chq_53313_Front</td>
+                    <td>01-01-22_11:21</td>
+                    <td>New Cairo </td>
+                    <td>2321123</td>
+                    <td>56568899664</td>
+                    <td>Returned</td>
+                    <td><a href="#">Open</a></td>
+                </tr>
+                <tr>
+                    <td>Chq_12123_Front</td>
+                    <td>06-12-22_11:21</td>
+                    <td>El Rehab </td>
+                    <td>2321123</td>
+                    <td>56568899664</td>
+                    <td>Submitted</td>
+                    <td><a href="#">Open</a></td>
+                </tr>
+                <tr>
+                    <td>Chq_12123_Front</td>
+                    <td>06-12-22_11:21</td>
+                    <td>El Rehab </td>
+                    <td>3434334</td>
+                    <td>453543534552</td>
+                    <td>In Progress</td>
+                    <td><a href="#">Open</a></td>
+                </tr>
+                <tr>
+                    <td>Chq_53313_Front</td>
+                    <td>01-01-22_11:21</td>
+                    <td>New Cairo </td>
+                    <td>11324553</td>
+                    <td>453543534552</td>
+                    <td>In Progress</td>
+                    <td><a href="#">Open</a></td>
+                </tr>
+                <tr>
+                    <td>Chq_12123_Front</td>
+                    <td>06-12-22_11:21</td>
+                    <td>EL- El-Haram</td>
+                    <td>7767754</td>
+                    <td>453543534552</td>
+                    <td>In Progress</td>
+                    <td><a href="#">Open</a></td>
+                </tr>
+            </table>
+            <div class="row mt-3 d-flex align-items-center">
+                <div class="col-4">
+                    <img src="./media/ByStatus1.png" />
+                </div>
+                <div class="col-4">
+                    <img src="./media/ByCustomerType1.png" />
+                </div>
+                <div class="col-4">
+                    <img src="./media/chart1.png" />
+                </div>
+            </div>
+        </section>
+        <section class="page page-3 hidden mt-5 m-auto">
+            <table class="w-100">
+                <tr>
+                    <th>Cheque Number</th>
+                    <th>Submission Date</th>
+                    <th>To Bank</th>
+                    <th>Beni. CIF</th>
+                    <th>Account</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Chq_12123_Front</td>
+                    <td>06-12-22_11:21</td>
+                    <td>El Rehab </td>
+                    <td>3434334</td>
+                    <td>453543534552</td>
+                    <td>In Progress</td>
+                    <td><a href="#">Open</a></td>
+                </tr>
+                <tr>
+                    <td>Chq_23008_Front</td>
+                    <td>09-11-22_11:21</td>
+                    <td>Down Town </td>
+                    <td>3234556</td>
+                    <td>09872288034</td>
+                    <td>Submitted</td>
+                    <td><a href="#">Open</a></td>
+                </tr>
+                <tr>
+                    <td>Chq_53313_Front</td>
+                    <td>01-01-22_11:21</td>
+                    <td>New Cairo </td>
+                    <td>2321123</td>
+                    <td>56568899664</td>
+                    <td>Returned</td>
+                    <td><a href="#">Open</a></td>
+                </tr>
+                <tr>
+                    <td>Chq_12123_Front</td>
+                    <td>06-12-22_11:21</td>
+                    <td>El Rehab </td>
+                    <td>2321123</td>
+                    <td>56568899664</td>
+                    <td>Submitted</td>
+                    <td><a href="#">Open</a></td>
+                </tr>
+                <tr>
+                    <td>Chq_12123_Front</td>
+                    <td>06-12-22_11:21</td>
+                    <td>El Rehab </td>
+                    <td>3434334</td>
+                    <td>453543534552</td>
+                    <td>In Progress</td>
+                    <td><a href="#">Open</a></td>
+                </tr>
+                <tr>
+                    <td>Chq_53313_Front</td>
+                    <td>01-01-22_11:21</td>
+                    <td>New Cairo </td>
+                    <td>11324553</td>
+                    <td>453543534552</td>
+                    <td>In Progress</td>
+                    <td><a href="#">Open</a></td>
+                </tr>
+                <tr>
+                    <td>Chq_12123_Front</td>
+                    <td>06-12-22_11:21</td>
+                    <td>EL- El-Haram</td>
+                    <td>7767754</td>
+                    <td>453543534552</td>
+                    <td>In Progress</td>
+                    <td><a href="#">Open</a></td>
+                </tr>
+            </table>
+            <div class="row mt-3 d-flex justify-content-center align-items-center">
+                <div class="col-4">
+                    <img src="./media/ByStatus2.png" />
+                </div>
+                <div class="col-4">
+                    <img src="./media/ByCustomerType2.png" />
+                </div>
+                <div class="col-4">
+                    <img src="./media/Returned Resasons.png" />
+                </div>
+                <div class="col-4">
+                    <img src="./media/chart1.png" />
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
