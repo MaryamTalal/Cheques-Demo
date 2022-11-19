@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheques Submitted</title>
+    <script src="https://kit.fontawesome.com/3936bbff8e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="./main.js"></script>
+
+</head>
+
+<body>
+    <section id="main-container">
+        <section id="body-container">
+            <nav>
+                <img src="./media/bvs.png" id="upper-logo" style="width:100px;" />
+                <header>submit cheques</header>
+            </nav>
+            <div id="inner-main-container">
+
+                <section id="process-list">
+                    <p class="process-item active">Check Documents</p>
+                    <div class="horizontal-line"></div>
+                    <p class="process-item">Fill cheque Data</p>
+                    <div class="horizontal-line"></div>
+                    <p class="process-item">Processing</p>
+                    <div class="horizontal-line"></div>
+                    <p class="process-item">Decision</p>
+                </section>
+
+                <section class="container-fluid">
+                    <section class="row">
+                        <div class="col-1">
+                            <div>
+                                <div class="position-relative d-flex justify-content-center align-items-center ml-5 bg-light list">
+                                    <input type="text" class="fs-4 ml-5 pt-1 pb-1 border-0 position-r bg-transparent w-75" style="outline:none; caret-color: transparent;" />
+                                <i class="fa-solid fa-chevron-down fs-4 w-15 w-25"></i>
+                                    <div class="list-body position-absolute bg-light w-100">
+                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Retail</div>
+                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">SME</div>
+                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Corporate
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-1  ml-5 bg-primary pb-1 rounded-pill w-100"></div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <!--Page 1-->
+                <section class="page page-1">
+                    <div class="case-title">
+                        <h2><b>case number :</b> 3952 </h2>
+                        <h2><b>Branch Name :</b> Nasr City</h2>
+                    </div>
+                    <header>
+                        <h1>customer information</h1>
+                    </header>
+                    <section class="body">
+                        <table>
+                            <tr>
+                                <th>Customer Name</th>
+                                <th>CIF</th>
+                                <th>Address</th>
+                                <th>Segment</th>
+                                <th>Type</th>
+                                <th>Is Borrower</th>
+                            </tr>
+                            <tr>
+                                <td>Mahmoud Dardir</td>
+                                <td>32467</td>
+                                <td>El Rehab </td>
+                                <td>VIP</td>
+                                <td>Retail</td>
+                                <td>YES</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <header>
+                        <h1>Documents</h1>
+                    </header>
+                    <section class="body">
+                        <table id="document">
+                            <tr>
+                                <th>Document Name</th>
+                                <th>Scanning Date</th>
+                                <th>Branch Name</th>
+                                <th>Accept Document</th>
+                                <th>Comment</th>
+                            </tr>
+                            <tr>
+                                <td>Chq_213_front.jpg</td>
+                                <td>11 - 09 - 2021</td>
+                                <td>Nasr City</td>
+                                <td>
+                                    <button class="accept">
+                                        <i class="fa-solid fa-x"></i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <div contenteditable="true">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Chq_213_back.jpg</td>
+                                <td>11 - 09 - 2021</td>
+                                <td>Nasr City</td>
+                                <td>
+                                    <button class="accept">
+                                        <i class="fa-solid fa-x"></i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <div contenteditable="true">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ID_213_front.jpg</td>
+                                <td>11 - 09 - 2021</td>
+                                <td>Nasr City</td>
+                                <td>
+                                    <button class="accept">
+                                        <i class="fa-solid fa-x"></i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <div contenteditable="true">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ID_213_back.jpg</td>
+                                <td>11 - 09 - 2021</td>
+                                <td>Nasr City</td>
+                                <td>
+                                    <button class="accept">
+                                        <i class="fa-solid fa-x"></i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <div contenteditable="true">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                </section>
+
+
+                <!--Page 2-->
+                <section class="page page-2 hidden">
+                    <div class="case-title" style="justify-content: space-between;">
+                        <h2>case number : 3952 </h2>
+                        <button><i class="fa-solid fa-plus"></i>Add Check</button>
+                    </div>
+                    <section class="cheque-card">
+                        <div class="cheque-card-header">
+                            <header>
+                                <h1>Cheque Number</h1>
+                                <input type="text" />
+                            </header>
+                            <button>
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                        </div>
+                        <div class="cheque-card-body">
+                            <header>
+                                <h1>Cheque Documents Assignment</h1>
+                            </header>
+                            <section>
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>File Type</th>
+                                        <th>Assign To</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" checked disabled>
+                                        </td>
+                                        <td>
+                                            Front CCITT Image
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <div class="position-relative d-inline-block ml-5 w-85 list">
+                                                    <input type="text" class="fs-4 ml-5 pt-1 pb-1 list-header position-relative " />
+                                                    <div class="list-body position-absolute bg-light hidden">
+                                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Retail</div>
+                                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">SME</div>
+                                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Corporate
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-chevron-down fs-4 w-15"></i>
+                                                <div class="mt-1 bg-primary ml-5  rounded-pill fw-light horizontal-line w-100"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" checked disabled>
+                                        </td>
+                                        <td>
+                                            Back CCITT Image
+                                        </td>
+                                        <td>
+                                            <select name="document" id="document">
+                                                <option value="">Choose Document</option>
+                                                <option value="">Chq_121_Front</option>
+                                                <option value="">Chq_121_Back</option>
+                                                <option value="">Chq_157_Front</option>
+                                                <option value="">Chq_157_Back</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" checked disabled>
+                                        </td>
+                                        <td>
+                                            Front JPEG Image
+                                        </td>
+                                        <td>
+                                            <select name="document" id="document">
+                                                <option value="">Choose Document</option>
+                                                <option value="">Chq_121_Front</option>
+                                                <option value="">Chq_121_Back</option>
+                                                <option value="">Chq_157_Front</option>
+                                                <option value="">Chq_157_Back</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="UVCheck">
+                                        </td>
+                                        <td>
+                                            Front UV Image
+                                        </td>
+                                        <td>
+                                            <select name="document" id="UVList" disabled>
+                                                <option value="">Choose Document</option>
+                                                <option value="">Chq_121_Front</option>
+                                                <option value="">Chq_121_Back</option>
+                                                <option value="">Chq_157_Front</option>
+                                                <option value="">Chq_157_Back</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </section>
+                            <header>
+                                <h1>Supporting Documents</h1>
+                            </header>
+                            <section id="supporting-document">
+                                <table class="display-table display-table1">
+                                    <tr>
+                                        <td>Document Name</td>
+                                        <td>Assign To</td>
+                                        <td><button>Add Document</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+
+                                        <td><select name="document" id="document">
+                                                <option value="">Choose Document</option>
+                                                <option value="">Chq_121_Front</option>
+                                                <option value="">Chq_121_Back</option>
+                                                <option value="">Chq_157_Front</option>
+                                                <option value="">Chq_157_Back</option>
+                                            </select></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+                            </section>
+                            <header>
+                                <h1>Cheque Details</h1>
+                            </header>
+                            <section id="supporting-document">
+                                <table class="display-table display-table2">
+                                    <tr>
+                                        <td>Payer Bank</td>
+                                        <td>Payer Account Number</td>
+                                        <td>Payer Bank Branch Code</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Beneficiary Account</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="document" id="document">
+                                                <option value=""></option>
+                                                <option value="">212123143131312323</option>
+                                                <option value="">121233444131312323</option>
+                                                <option value="">554543535444131312</option>
+                                            </select>
+                                        </td>
+
+                                        <td><button id="chkStatusButtn">Check Status</button></td>
+                                        <td>
+                                            <div id="accountStatusDIV">
+                                                <p style="color:#008000">Account is Active</p>
+                                              </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MCR</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Currency</td>
+                                        <td>Amount</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="document" id="document">
+                                                <option value=""></option>
+                                                <option value="">EGP</option>
+                                                <option value="">USD</option>
+                                                <option value="">EUR</option>
+                                            </select>
+                                        </td>
+
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bank Endorcement Date</td>
+                                        <td>Bank Branch</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+
+                                        <td><select name="document" id="document">
+                                                <option value="">Choose Document</option>
+                                                <option value="">Chq_121_Front</option>
+                                                <option value="">Chq_121_Back</option>
+                                                <option value="">Chq_157_Front</option>
+                                                <option value="">Chq_157_Back</option>
+                                            </select></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Endorcement To</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+
+                                        <td><select name="document" id="document">
+                                                <option value="">Choose Document</option>
+                                                <option value="">Chq_121_Front</option>
+                                                <option value="">Chq_121_Back</option>
+                                                <option value="">Chq_157_Front</option>
+                                                <option value="">Chq_157_Back</option>
+                                            </select></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+                            </section>
+                        </div>
+                    </section>
+                </section>
+
+
+                <!--Page 3-->
+                <section class="page page-3 hidden">
+
+                </section>
+
+            </div>
+            <footer>
+                <div>
+                    <button id="previousBtn" class="disabled"><i class="fa-solid fa-chevron-left"></i> Previous
+                    </button>
+                    <button id="nextBtn">Next<i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </footer>
+        </section>
+    </section>
+</body>
+
+</html>
