@@ -70,7 +70,6 @@ window.addEventListener("load", () => {
 
 
         let received = document.getElementById("received")
-        received.children[1].style.width = `${received.children[0].offsetWidth+30}px`
         if (received) {
             received.addEventListener("click", (e) => {
                 received.children[1].classList.remove("hidden");
@@ -91,7 +90,6 @@ window.addEventListener("load", () => {
             })
         }
         let submitted = document.getElementById("submitted")
-        submitted.children[1].style.width = `${submitted.children[0].offsetWidth+30}px`
         if (submitted) {
             submitted.addEventListener("click", (e) => {
                 received.children[1].classList.add("hidden");
