@@ -182,6 +182,7 @@ window.addEventListener("load", () => {
         let btn1 = document.getElementById("btn1")
         let btn2 = document.getElementById("btn2")
         btn1.addEventListener("click", (e) => {
+            window.scrollTo(0,0)
             if (index != 1) {
                 pages[index].classList.add("hidden");
                 processItem[index-1].classList.remove("bg-primary", "text-light")
@@ -192,9 +193,13 @@ window.addEventListener("load", () => {
                 if (index == 1) {
                     btn1.innerText = "Back to the Bank"
                 }
+                if (index != pages.length-2) {
+                    btn2.innerText = "Proceed"
+                }
             }
         })
         btn2.addEventListener("click", (e) => {
+            window.scrollTo(0,0)
             if (index < pages.length - 2) {
                 pages[index].classList.add("hidden");
                 processItem[index-1].classList.remove("bg-primary", "text-light")
@@ -205,7 +210,15 @@ window.addEventListener("load", () => {
                 if (index != 1) {
                     btn1.innerText = "Back"
                 }
+                if (index == pages.length-2) {
+                    btn2.innerText = "Submit"
+                }
             }
+        })
+
+        let comment = document.getElementById("comment")
+        comment.addEventListener("click",(e)=>{
+            document.getElementsByClassName("comment-row")[0].classList.remove("hidden")
         })
     }
 
