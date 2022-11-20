@@ -124,7 +124,7 @@ nav {
     background-image: url(./media/dots.png);
     box-shadow: inset 0 0 30px var(--shadow-gray);
     padding: 5%;
-    padding-bottom: 0%;
+    /* padding-bottom: 0%; */
     box-sizing: border-box; 
 }
 
