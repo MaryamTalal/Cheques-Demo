@@ -21,43 +21,59 @@
 </head>
 
 <body>
-    <section id="main-container">
-        <section id="body-container">
-            <nav>
-                <img src="./media/bvs.png" id="upper-logo" style="width:100px;" />
-                <header>submit cheques</header>
-            </nav>
-            <div id="inner-main-container">
-
-                <section id="process-list">
-                    <p class="process-item active">Check Documents</p>
-                    <div class="horizontal-line"></div>
-                    <p class="process-item">Fill cheque Data</p>
-                    <div class="horizontal-line"></div>
-                    <p class="process-item">Processing</p>
-                    <div class="horizontal-line"></div>
-                    <p class="process-item">Decision</p>
-                </section>
-
-                <section class="container-fluid">
-                    <section class="row">
-                        <div class="col-1">
-                            <div>
-                                <div class="position-relative d-flex justify-content-center align-items-center ml-5 bg-light list">
-                                    <input type="text" class="fs-4 ml-5 pt-1 pb-1 border-0 position-r bg-transparent w-75" style="outline:none; caret-color: transparent;" />
-                                <i class="fa-solid fa-chevron-down fs-4 w-15 w-25"></i>
-                                    <div class="list-body position-absolute bg-light w-100">
-                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Retail</div>
-                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">SME</div>
-                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Corporate
-                                        </div>
-                                    </div>
+    <nav>
+        <a href="./"><img src="./media/bvs.png" id="upper-logo" style="width:100px;" /></a>
+    </nav>
+    <section class="main-container">
+        <section class="page p-0 container-fluid">
+            <div class="row h-100">
+                <div style="width:24%"
+                    class="process-item d-inline-block m-auto text-center fs-3 text-capitalize pt-3 pb-3 bg-primary text-light">
+                    Check Documents</div>
+                <div style="width:24%"
+                    class="process-item d-inline-block m-auto text-center fs-3 text-capitalize pt-3 pb-3">Fill cheque
+                    Data
+                </div>
+                <div style="width:24%"
+                    class="process-item d-inline-block m-auto text-center fs-3 text-capitalize pt-3 pb-3">Processing
+                </div>
+                <div style="width:24%"
+                    class="process-item d-inline-block m-auto text-center fs-3 text-capitalize pt-3 pb-3">Decision
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid">
+            <section class="row">
+                <div class="col-1">
+                    <div class="position-relative  ml-5 bg-light list">
+                        <div class="row p-0 m-0 d-flex justify-content-center align-items-center"> 
+                            <input type="text"
+                                class="fs-4 ml-5 pt-1 pb-1 border-0 position-r bg-transparent col-10"
+                                style="outline:none; caret-color: transparent;" />
+                            <i class="fa-solid fa-chevron-down fs-4 w-15 col-2"></i>
+                        </div>
+                        <div class="row m-0 p-0">
+                            <div class="mt-1  ml-5 bg-primary pb-1 rounded-pill col-12"></div>
+                        </div>
+                        <div class="row m-0 p-0">
+                            <div class="list-body position-relative bg-light w-100 p-0 m-0">
+                                <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Retail
                                 </div>
-                                <div class="mt-1  ml-5 bg-primary pb-1 rounded-pill w-100"></div>
+                                <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">SME</div>
+                                <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Corporate
+                                </div>
                             </div>
                         </div>
-                    </section>
-                </section>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <section id="main-container">
+        <section id="body-container">
+            <div id="inner-main-container">
+
                 <!--Page 1-->
                 <section class="page page-1">
                     <div class="case-title">
@@ -197,16 +213,25 @@
                                         <td>
                                             <div>
                                                 <div class="position-relative d-inline-block ml-5 w-85 list">
-                                                    <input type="text" class="fs-4 ml-5 pt-1 pb-1 list-header position-relative " />
+                                                    <input type="text"
+                                                        class="fs-4 ml-5 pt-1 pb-1 list-header position-relative " />
                                                     <div class="list-body position-absolute bg-light hidden">
-                                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Retail</div>
-                                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">SME</div>
-                                                        <div class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">Corporate
+                                                        <div
+                                                            class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">
+                                                            Retail</div>
+                                                        <div
+                                                            class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">
+                                                            SME</div>
+                                                        <div
+                                                            class="fs-4 border-bottom p-1 text-capitalize bg-light list-item">
+                                                            Corporate
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <i class="fa-solid fa-chevron-down fs-4 w-15"></i>
-                                                <div class="mt-1 bg-primary ml-5  rounded-pill fw-light horizontal-line w-100"></div>
+                                                <div
+                                                    class="mt-1 bg-primary ml-5  rounded-pill fw-light horizontal-line w-100">
+                                                </div>
                                             </div>
                                         </td>
                                     </tr>
@@ -331,7 +356,7 @@
                                         <td>
                                             <div id="accountStatusDIV">
                                                 <p style="color:#008000">Account is Active</p>
-                                              </div>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
