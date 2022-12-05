@@ -137,17 +137,17 @@ window.addEventListener("load", () => {
         let chequeBody = document.getElementsByClassName("cheque-body")[0];
         let chequeBodyCleanClone = chequeBody.cloneNode(true)
         let page2 = document.getElementsByClassName("page-2")[0]
-        document.addEventListener("click",function(e){
+        document.addEventListener("click", function (e) {
             console.log(e.target.parentNode.parentNode.parentNode)
-            if(e.target.classList.contains('addCheque')){
+            if (e.target.classList.contains('addCheque')) {
                 let chequeBodyClone = chequeBodyCleanClone.cloneNode(true)
                 e.target.parentNode.parentNode.parentNode.insertBefore(chequeBodyClone, e.target.parentNode.parentNode.nextSibling);
-             }
-             if(e.target.classList.contains('delCheque')){
+            }
+            if (e.target.classList.contains('delCheque')) {
                 e.target.parentNode.parentNode.remove()
-            
-             }
-         });
+
+            }
+        });
 
         let accountCheck = document.getElementById("accountCheck")
         accountCheck.addEventListener("click", (e) => {
@@ -182,44 +182,83 @@ window.addEventListener("load", () => {
         let btn1 = document.getElementById("btn1")
         let btn2 = document.getElementById("btn2")
         btn1.addEventListener("click", (e) => {
-            window.scrollTo(0,0)
+            window.scrollTo(0, 0)
             if (index != 1) {
                 pages[index].classList.add("hidden");
-                processItem[index-1].classList.remove("bg-primary", "text-light")
+                processItem[index - 1].classList.remove("bg-primary", "text-light")
                 index--;
                 pages[index].classList.remove("hidden");
-                processItem[index-1].classList.add("bg-primary", "text-light")
-                window.scrollTo(0,0)
+                processItem[index - 1].classList.add("bg-primary", "text-light")
+                window.scrollTo(0, 0)
                 if (index == 1) {
                     btn1.innerText = "Back to the Bank"
                 }
-                if (index != pages.length-2) {
+                if (index != pages.length - 2) {
                     btn2.innerText = "Proceed"
                 }
             }
         })
         btn2.addEventListener("click", (e) => {
-            window.scrollTo(0,0)
+            window.scrollTo(0, 0)
             if (index < pages.length - 2) {
                 pages[index].classList.add("hidden");
-                processItem[index-1].classList.remove("bg-primary", "text-light")
+                processItem[index - 1].classList.remove("bg-primary", "text-light")
                 index++;
                 pages[index].classList.remove("hidden");
-                processItem[index-1].classList.add("bg-primary", "text-light")
-                window.scrollTo(0,0)
+                processItem[index - 1].classList.add("bg-primary", "text-light")
+                window.scrollTo(0, 0)
                 if (index != 1) {
                     btn1.innerText = "Back"
                 }
-                if (index == pages.length-2) {
+                if (index == pages.length - 2) {
                     btn2.innerText = "Submit"
                 }
             }
         })
 
         let comment = document.getElementById("comment")
-        comment.addEventListener("click",(e)=>{
+        comment.addEventListener("click", (e) => {
             document.getElementsByClassName("comment-row")[0].classList.remove("hidden")
         })
+    }
+    else if (serviceName == "CHEQUERETURNED") {
+        //INSERT HERE
+        //INSERT HERE
+        //INSERT HERE
+        //INSERT HERE
+    }
+    else if (serviceName == "CHEQUERECEIVED") {
+        let btn1 = document.getElementById("btn1")
+        let btn2 = document.getElementById("btn2")
+        let btn3 = document.getElementById("btn3")
+        let processItem = document.querySelectorAll(".process-item")
+        let pages = document.querySelectorAll
+        let pageNo = 1 //Must be 
+        if (pageNo < 2) {
+            btn1.classList.add("hidden");
+            btn3.classList.add("hidden");
+        }
+
+
+        btn2.addEventListener("click", (e) => {
+            //Next Button
+            if (pageNo < processItem.length) {
+                pageNo++;
+
+                if (pageNo > 1 && btn1.classList.contains("hidden")) {
+                    btn1.classList.remove("hidden")
+
+                }
+                
+            }
+        })
+
+
+
+
+
+
+
     }
 
 })
@@ -260,4 +299,4 @@ function humanize(num) {
         if (end < 100) return ones[numString[0]] + ' thousand and ' + humanize(end);
         return ones[numString[0]] + ' thousand ' + humanize(end);
     }
-}
+}                                                              
