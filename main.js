@@ -321,7 +321,42 @@ window.addEventListener("load", () => {
         })
         btn3.addEventListener("click",(e) =>{
             e.stopPropagation()
-            window.location.href = "Confirmation.html"
+            window.location.href = "Pending.html"
+        })
+
+        let checkFeedbacks = document.querySelectorAll(".checkFeedback")
+        let noOfChecked = 0
+        checkFeedbacks.forEach((checkFeedback)=>{
+            checkFeedback.addEventListener("click",(e)=>{
+                if(checkFeedback.checked){
+                    btn2.classList.add("text-primary","bg-light")
+                    btn2.classList.remove("text-light","bg-primary")
+                    btn2.disabled = true
+                    
+                    btn3.classList.remove("text-primary","bg-light")
+                    btn3.classList.add("text-light","bg-primary")
+                    btn3.disabled = false 
+
+                    noOfChecked++;
+                }
+                else{
+                    
+
+                    noOfChecked--;
+                }
+                if(noOfChecked == 0){
+                    btn3.classList.add("text-primary","bg-light")
+                    btn3.classList.remove("text-light","bg-primary")
+                    btn3.disabled = false
+                    
+                    btn2.classList.remove("text-primary","bg-light")
+                    btn2.classList.add("text-light","bg-primary")
+                    btn2.disabled = true
+                }
+
+
+
+            })
         })
 
     }
@@ -335,7 +370,7 @@ window.addEventListener("load", () => {
             e.target.parentNode.parentNode.parentNode.children[4].children[0].classList.remove("hidden")
             console.log()
         })
-        
+
         let clearOnceFeedBackRow = document.getElementById("clearOnceFeedBackRow")
         let clearOnceFeedBackBtn = document.getElementById("clearOnceFeedBackBtn")
         clearOnceFeedBackBtn.addEventListener("click",(e)=>{
@@ -409,10 +444,44 @@ window.addEventListener("load", () => {
         })
         btn3.addEventListener("click",(e) =>{
             e.stopPropagation()
-            window.location.href = "Confirmation.html"
+            window.location.href = "Pending.html"
         })
 
 
+        let checkFeedbacks = document.querySelectorAll(".checkFeedback")
+        let noOfChecked = 0
+        checkFeedbacks.forEach((checkFeedback)=>{
+            checkFeedback.addEventListener("click",(e)=>{
+                if(checkFeedback.checked){
+                    btn2.classList.add("text-primary","bg-light")
+                    btn2.classList.remove("text-light","bg-primary")
+                    btn2.disabled = true
+                    
+                    btn3.classList.remove("text-primary","bg-light")
+                    btn3.classList.add("text-light","bg-primary")
+                    btn3.disabled = false 
+
+                    noOfChecked++;
+                }
+                else{
+                    
+
+                    noOfChecked--;
+                }
+                if(noOfChecked == 0){
+                    btn3.classList.add("text-primary","bg-light")
+                    btn3.classList.remove("text-light","bg-primary")
+                    btn3.disabled = false
+                    
+                    btn2.classList.remove("text-primary","bg-light")
+                    btn2.classList.add("text-light","bg-primary")
+                    btn2.disabled = true
+                }
+
+
+
+            })
+        })
 
 
     }
