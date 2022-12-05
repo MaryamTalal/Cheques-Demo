@@ -237,40 +237,180 @@ window.addEventListener("load", () => {
         })
 
     }
+    ///////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////
     else if (serviceName == "CHEQUERETURNED") {
-        //INSERT HERE
-        //INSERT HERE
-        //INSERT HERE
-        //INSERT HERE
-    }
-    else if (serviceName == "CHEQUERECEIVED") {
+        let accountCheck = document.getElementById("accountCheck")
+        accountCheck.addEventListener("click", (e) => {
+            e.stopPropagation();
+            e.target.parentNode.parentNode.parentNode.children[4].children[0].classList.remove("hidden")
+            console.log()
+        })
+
+        let clearOnceFeedBackRow = document.getElementById("clearOnceFeedBackRow")
+        let clearOnceFeedBackBtn = document.getElementById("clearOnceFeedBackBtn")
+        clearOnceFeedBackBtn.addEventListener("click",(e)=>{
+            e.stopImmediatePropagation();
+            let clearOnceFeedBackRowClone = clearOnceFeedBackRow.cloneNode(true)
+            clearOnceFeedBackRowClone.classList.remove("hidden")
+            document.getElementById("clearOnceFeedBackRow").parentNode.insertBefore(clearOnceFeedBackRowClone,  document.getElementById("clearOnceFeedBackRow").nextSibling);
+        })
+        let addDocRow = document.getElementById("addDocRow")
+        let addDocBtn = document.getElementById("addDocBtn")
+        addDocBtn.addEventListener("click",(e)=>{
+            e.stopImmediatePropagation();
+            let addDocRowClone = addDocRow.cloneNode(true)
+            addDocRowClone.classList.remove("hidden")
+            document.getElementById("addDocRow").parentNode.insertBefore(addDocRowClone,  document.getElementById("addDocRow").nextSibling);
+        })
+
         let btn1 = document.getElementById("btn1")
         let btn2 = document.getElementById("btn2")
         let btn3 = document.getElementById("btn3")
+        let pages = document.querySelectorAll(".page");
         let processItem = document.querySelectorAll(".process-item")
-        let pages = document.querySelectorAll
-        let pageNo = 1 //Must be 
-        if (pageNo < 2) {
-            btn1.classList.add("hidden");
-            btn3.classList.add("hidden");
-        }
-
-
-        btn2.addEventListener("click", (e) => {
-            //Next Button
-            if (pageNo < processItem.length) {
-                pageNo++;
-
-                if (pageNo > 1 && btn1.classList.contains("hidden")) {
-                    btn1.classList.remove("hidden")
-
+        
+        console.log(processItem)
+        let index = 1;
+        btn1.addEventListener("click", (e) => {
+            window.scrollTo(0, 0)
+            if (index != 1) {
+                pages[index].classList.add("hidden");
+                processItem[index - 1].classList.remove("bg-primary", "text-light")
+                index--;
+                pages[index].classList.remove("hidden");
+                processItem[index - 1].classList.add("bg-primary", "text-light")
+                window.scrollTo(0, 0)
+                if(index == 1){
+                    btn1.classList.add("hidden")
                 }
-                
+                if(index == 2){
+                    btn3.classList.remove("hidden")
+                }
+                else{
+                    btn3.classList.add("hidden")
+                }
             }
         })
+        btn2.addEventListener("click", (e) => {
+            window.scrollTo(0, 0)
+            if (index < pages.length - 2) {
+                pages[index].classList.add("hidden");
+                processItem[index - 1].classList.remove("bg-primary", "text-light")
+                index++;
+                pages[index].classList.remove("hidden");
+                processItem[index - 1].classList.add("bg-primary", "text-light")
+                window.scrollTo(0, 0)
+                if(index > 1){
+                    btn1.classList.remove("hidden")
+                }
+                if(index == 2){
+                    btn3.classList.remove("hidden")
+                }
+                else{
+                    btn3.classList.add("hidden")
+                }
+                if(index == pages.length-2){
+                    btn2.innerText = "Submit"
+                }
+            }
+            else if(index == pages.length - 2){
+                window.location.href = "Confirmation.html"
+            }
+        })
+        btn3.addEventListener("click",(e) =>{
+            e.stopPropagation()
+            window.location.href = "Confirmation.html"
+        })
 
+    }
+    ///////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////
+    else if (serviceName == "CHEQUERECEIVED") {
+        let accountCheck = document.getElementById("accountCheck")
+        accountCheck.addEventListener("click", (e) => {
+            e.stopPropagation();
+            e.target.parentNode.parentNode.parentNode.children[4].children[0].classList.remove("hidden")
+            console.log()
+        })
+        
+        let clearOnceFeedBackRow = document.getElementById("clearOnceFeedBackRow")
+        let clearOnceFeedBackBtn = document.getElementById("clearOnceFeedBackBtn")
+        clearOnceFeedBackBtn.addEventListener("click",(e)=>{
+            e.stopImmediatePropagation();
+            let clearOnceFeedBackRowClone = clearOnceFeedBackRow.cloneNode(true)
+            clearOnceFeedBackRowClone.classList.remove("hidden")
+            document.getElementById("clearOnceFeedBackRow").parentNode.insertBefore(clearOnceFeedBackRowClone,  document.getElementById("clearOnceFeedBackRow").nextSibling);
+        })
+        let addDocRow = document.getElementById("addDocRow")
+        let addDocBtn = document.getElementById("addDocBtn")
+        addDocBtn.addEventListener("click",(e)=>{
+            e.stopImmediatePropagation();
+            let addDocRowClone = addDocRow.cloneNode(true)
+            addDocRowClone.classList.remove("hidden")
+            document.getElementById("addDocRow").parentNode.insertBefore(addDocRowClone,  document.getElementById("addDocRow").nextSibling);
+        })
 
-
+        let btn1 = document.getElementById("btn1")
+        let btn2 = document.getElementById("btn2")
+        let btn3 = document.getElementById("btn3")
+        let pages = document.querySelectorAll(".page");
+        let processItem = document.querySelectorAll(".process-item")
+        
+        console.log(processItem)
+        let index = 1;
+        btn1.addEventListener("click", (e) => {
+            window.scrollTo(0, 0)
+            if (index != 1) {
+                pages[index].classList.add("hidden");
+                processItem[index - 1].classList.remove("bg-primary", "text-light")
+                index--;
+                pages[index].classList.remove("hidden");
+                processItem[index - 1].classList.add("bg-primary", "text-light")
+                window.scrollTo(0, 0)
+                if(index == 1){
+                    btn1.classList.add("hidden")
+                }
+                if(index == 2){
+                    btn3.classList.remove("hidden")
+                }
+                else{
+                    btn3.classList.add("hidden")
+                }
+            }
+        })
+        btn2.addEventListener("click", (e) => {
+            window.scrollTo(0, 0)
+            if (index < pages.length - 2) {
+                pages[index].classList.add("hidden");
+                processItem[index - 1].classList.remove("bg-primary", "text-light")
+                index++;
+                pages[index].classList.remove("hidden");
+                processItem[index - 1].classList.add("bg-primary", "text-light")
+                window.scrollTo(0, 0)
+                if(index > 1){
+                    btn1.classList.remove("hidden")
+                }
+                if(index == 2){
+                    btn3.classList.remove("hidden")
+                }
+                else{
+                    btn3.classList.add("hidden")
+                }
+                if(index == pages.length-2){
+                    btn2.innerText = "Submit"
+                }
+            }
+            else if(index == pages.length - 2){
+                window.location.href = "Confirmation.html"
+            }
+        })
+        btn3.addEventListener("click",(e) =>{
+            e.stopPropagation()
+            window.location.href = "Confirmation.html"
+        })
 
 
 
