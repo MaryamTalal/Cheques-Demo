@@ -214,12 +214,28 @@ window.addEventListener("load", () => {
                     btn2.innerText = "Submit"
                 }
             }
+            if(index == pages.length - 2){
+                window.location.href = "Confirmation.html"
+            }
         })
 
-        let comment = document.getElementById("comment")
-        comment.addEventListener("click", (e) => {
-            document.getElementsByClassName("comment-row")[0].classList.remove("hidden")
+        let clearOnceFeedBackRow = document.getElementById("clearOnceFeedBackRow")
+        let clearOnceFeedBackBtn = document.getElementById("clearOnceFeedBackBtn")
+        clearOnceFeedBackBtn.addEventListener("click",(e)=>{
+            e.stopImmediatePropagation();
+            let clearOnceFeedBackRowClone = clearOnceFeedBackRow.cloneNode(true)
+            clearOnceFeedBackRowClone.classList.remove("hidden")
+            document.getElementById("clearOnceFeedBackRow").parentNode.insertBefore(clearOnceFeedBackRowClone,  document.getElementById("clearOnceFeedBackRow").nextSibling);
         })
+        let addDocRow = document.getElementById("addDocRow")
+        let addDocBtn = document.getElementById("addDocBtn")
+        addDocBtn.addEventListener("click",(e)=>{
+            e.stopImmediatePropagation();
+            let addDocRowClone = addDocRow.cloneNode(true)
+            addDocRowClone.classList.remove("hidden")
+            document.getElementById("addDocRow").parentNode.insertBefore(addDocRowClone,  document.getElementById("addDocRow").nextSibling);
+        })
+
     }
     else if (serviceName == "CHEQUERETURNED") {
         //INSERT HERE
