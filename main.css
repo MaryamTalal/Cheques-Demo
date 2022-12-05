@@ -1,0 +1,461 @@
+@font-face {
+    font-family: header;
+    src: url(./media/VisbyRoundCF-DemiBold.otf);
+}
+
+@font-face {
+    font-family: main;
+    src: url(./media/VisbyRoundCF-Regular.otf);
+}
+
+:root {
+    --blue: #1e90ff;
+    --light: #f8f9fa;
+    --dark: #4a4d50;
+    --light-gray: #b1c0cb;
+    --shadow-gray: #33333344;
+    --white: #fff;
+    --bvs-blue: #015276;
+
+
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    position: relative;
+    color:var(--dark)
+}
+
+html {
+    overflow-x: hidden;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    background-color: var(--light);
+    font-family:main
+}
+
+.hidden {
+    display: none;
+}
+
+.disabled {
+    color: #9eabb8;
+    border-bottom-color: #9eabb8;
+}
+
+.label{
+    color:var(--dark)
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+.list{
+    background-color: #fff;
+}
+
+.list-body{
+    overflow: hidden;
+    z-index:10000000000000 !important;
+}
+
+div.list-body div:hover{
+   background-color: #fff !important;
+}
+
+.list-body.hidden{
+    height: 0px;
+}
+
+/*****************************************************/
+/*TABLE*/
+/*****************************************************/
+
+table {
+    border-spacing: 0
+}
+
+table td {
+    border-right: 1px solid var(--blue);
+    border-bottom:1px solid var(--blue) ;
+}
+
+table tr:last-child td{
+    border-bottom: none
+} 
+
+table td:last-child{
+    border-right: none;
+}
+
+table th {
+    font-family: header;
+    border-right: 1px solid var(--blue);
+    border-bottom: 1px solid var(--blue);
+
+}
+
+table th:last-child{
+    border-right: none;
+}
+/*****************************************************/
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--white);
+    color: var(--bvs-blue);
+    height:10vh
+}
+
+.main-container {
+    width: 100%;
+    min-height: 90vh;
+    background-image: url(./media/dots.png);
+    box-shadow: inset 0 0 30px var(--shadow-gray);
+    padding: 5%;
+    /* padding-bottom: 0%; */
+    box-sizing: border-box; 
+}
+
+.page {
+    width: 90%;
+    background-color: var(--white);
+}
+
+
+
+/****************************************************/
+/****************************************************/
+/****************************************************/
+/****************************************************/
+/****************************************************/
+/****************************************************/
+/****************************************************/
+/****************************************************/
+/****************************************************/
+/****************************************************/
+/****************************************************/
+/****************************************************/
+/****************************************************/
+/****************************************************/
+.page-2 div[contenteditable="true"]{
+    border-radius: 5px;
+}
+
+
+
+
+
+
+div[contenteditable="true"]{
+    border: none !important;
+    border-bottom: 1px solid var(--blue) !important;
+    border-radius: 0px !important;
+}
+
+
+header {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: header;
+    font-weight: 900;
+    color: #005377;
+}
+
+
+
+.page header h1 {
+    font-size: 1.9rem;
+    width: fit-content;
+    font-weight: 600;
+    margin: 20px 0px 13px 0px;
+}
+
+.page .case-title {
+    margin-left: 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding-left: 65%;
+}
+
+.page.page-1 .case-title {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.page .case-title button {
+    border: none;
+    border-bottom: 1px solid #005377;
+    background-color: white;
+    padding: 10px 0px;
+    color: #005377;
+    font-family: main;
+    width: fit-content !important
+}
+
+
+.page .case-title h2,
+.page .case-title button {
+    font-size: 1.6rem;
+    width: fit-content;
+    display: inline-block;
+    font-family: header;
+    color: var(--dark);
+    text-transform: capitalize;
+}
+
+
+
+
+.page .body #document td button {
+    font-size: 1.4rem;
+    font-family: main;
+    color: #9eabb8;
+    text-align: center;
+    border: 2px solid #9eabb8;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 2.5em;
+    height: 2.5em;
+
+}
+
+.page .body #document td button:hover {
+    color: #005377;
+    border: 2px solid #005377;
+
+}
+
+.page .body #document td button.checked {
+    color: #08b94c;
+    border: 2px solid #08b94c;
+}
+
+.page .body #document td:first-child {
+    color: #005377;
+    text-decoration: underline;
+}
+
+.page .body #document th,
+.page .body #document td {
+    border-bottom: 1px solid var(--light-gray);
+}
+
+
+
+
+
+.page .body #document th:last-child {
+    width: 35%;
+}
+
+.page td div[contenteditable="true"] {
+    max-width: 20vw;
+    height: 100%;
+    overflow-wrap: break-word;
+    overflow: auto;
+    border: none
+        /* word-wrap: break-all; */
+}
+
+footer {
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+
+footer div {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+.page .case-title button,
+footer div button {
+    border: none;
+    border-bottom: 1px solid #005377;
+    background-color: white;
+    padding: 10px 0px;
+    font-size: 1.6rem;
+    color: #005377;
+    font-family: main;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+footer div button {
+    background-color: transparent;
+}
+
+.cheque-card {
+    border: 1px solid #005377;
+    margin-top: 20px;
+}
+
+
+.cheque-card div.cheque-card-header {
+    border-bottom: 1px solid #005377;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px 0px 20px;
+}
+
+.cheque-card header {
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cheque-card header input {
+    font-size: 1.9rem;
+    border: 1px solid var(--bvs-blue);
+}
+
+.cheque-card div.cheque-card-header header h1 {
+    font-size: 1.9rem;
+    width: fit-content;
+    font-weight: 600;
+    padding: 0px;
+    margin: 0px 20px;
+    margin-left: 0px;
+}
+
+.cheque-card div:first-child button {
+    background-color: #fff;
+    font-size: 1.9rem;
+    padding: 10px 15px;
+    border: none;
+    color: #d62607;
+
+}
+
+.cheque-card-body {
+    padding: 0px 10px;
+}
+
+.cheque-card-body header h1 {
+    font-size: 1.7rem;
+    width: fit-content;
+    font-weight: 600;
+    padding-left: 20px;
+    font-family: header;
+}
+
+.cheque-card-body header {
+    display: block;
+}
+
+.cheque-card-body section table {
+    width: 90%;
+    margin: 0px auto;
+
+}
+
+.cheque-card-body section table th {
+    font-size: 1.5rem;
+    font-family: main;
+    color: var(--dark);
+    padding: 0px 15px 15px;
+    border-right: 1px solid var(--light-gray);
+    border-bottom: 1px solid var(--light-gray);
+
+}
+
+.cheque-card-body section table td {
+    font-size: 1.4rem;
+    font-family: main;
+    color: var(--dark);
+    text-align: center;
+    padding: 15px;
+    border-right: 1px solid var(--light-gray);
+    border-bottom: 1px solid var(--light-gray);
+
+}
+
+.cheque-card-body section table tr:last-child td {
+    border-bottom: none;
+}
+
+.page section.page-2 div.case-title:nth-child(2) {
+    justify-content: space-between;
+}
+
+#supporting-document table {
+    border: none;
+    font-size: 1.5rem;
+    padding: 0%;
+    width: 90%;
+    margin: auto;
+}
+
+#supporting-document table.display-table tr:nth-child(odd) {
+    font-weight: bold;
+
+}
+
+#supporting-document table tr:first-child td:last-child {
+    text-align: right;
+}
+
+#supporting-document table td {
+    border: none;
+    text-align: left;
+}
+
+#supporting-document table td div[contenteditable="true"] {
+    border: 1px solid #005377;
+    height: 3.5rem;
+}
+
+#supporting-document table td:first-child {
+    width: 35%;
+}
+
+#supporting-document table button {
+    border: none;
+    background-color: #005377;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+table.display-table td {
+    width: 30%;
+    font-size: 1.4rem;
+    vertical-align: bottom;
+    padding-top: 2px !important;
+    padding-bottom: 0px !important;
+}
+
+.display-table1 td:last-child {
+    vertical-align: bottom;
+}
+
+#supporting-document table.display-table tr:nth-child(even) td{
+    padding-bottom:20px !important;
+}
+
+#supporting-document table.display-table tr td{
+    width: 33%;
+    margin-right: 1%;
+}
