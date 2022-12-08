@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
     }
 
     //To avoid undefined errors and to clarify which part of the code this is from
-    let serviceName = window.location.href.split("/")[3].split(".")[0].toUpperCase()
+    let serviceName = document.getElementsByTagName("body")[0].id.toUpperCase()
     console.log(serviceName)
     if (serviceName == "DASHBOARD") {
         let filter1 = document.getElementById("page-1-filter")
@@ -133,21 +133,21 @@ window.addEventListener("load", () => {
                 acceptColBtn[i].click()
             })
         })
-        let addCheques = document.querySelectorAll(".addCheque");
-        let chequeBody = document.getElementsByClassName("cheque-body")[0];
-        let chequeBodyCleanClone = chequeBody.cloneNode(true)
-        let page2 = document.getElementsByClassName("page-2")[0]
-        document.addEventListener("click", function (e) {
-            console.log(e.target.parentNode.parentNode.parentNode)
-            if (e.target.classList.contains('addCheque')) {
-                let chequeBodyClone = chequeBodyCleanClone.cloneNode(true)
-                e.target.parentNode.parentNode.parentNode.insertBefore(chequeBodyClone, e.target.parentNode.parentNode.nextSibling);
-            }
-            if (e.target.classList.contains('delCheque')) {
-                e.target.parentNode.parentNode.remove()
+        //let addCheques = document.querySelectorAll(".addCheque");
+        // let chequeBody = document.getElementsByClassName("cheque-body")[0];
+        // let chequeBodyCleanClone = chequeBody.cloneNode(true)
+        // let page2 = document.getElementsByClassName("page-2")[0]
+        // document.addEventListener("click", function (e) {
+        //     console.log(e.target.parentNode.parentNode.parentNode)
+        //     if (e.target.classList.contains('addCheque')) {
+        //         let chequeBodyClone = chequeBodyCleanClone.cloneNode(true)
+        //         e.target.parentNode.parentNode.parentNode.insertBefore(chequeBodyClone, e.target.parentNode.parentNode.nextSibling);
+        //     }
+        //     if (e.target.classList.contains('delCheque')) {
+        //         e.target.parentNode.parentNode.remove()
 
-            }
-        });
+        //     }
+        // });
 
         let accountCheck = document.getElementById("accountCheck")
         accountCheck.addEventListener("click", (e) => {
@@ -175,12 +175,14 @@ window.addEventListener("load", () => {
         })
 
 
-        let pages = document.querySelectorAll(".page");
-        let processItem = document.querySelectorAll(".process-item")
-        console.log(processItem)
-        let index = 1;
         let btn1 = document.getElementById("btn1")
         let btn2 = document.getElementById("btn2")
+        let btn3 = document.getElementById("btn3")
+        let pages = document.querySelectorAll(".page");
+        let processItem = document.querySelectorAll(".process-item")
+        
+        console.log(processItem)
+        let index = 1;
         btn1.addEventListener("click", (e) => {
             window.scrollTo(0, 0)
             if (index != 1) {
@@ -190,11 +192,14 @@ window.addEventListener("load", () => {
                 pages[index].classList.remove("hidden");
                 processItem[index - 1].classList.add("bg-primary", "text-light")
                 window.scrollTo(0, 0)
-                if (index == 1) {
-                    btn1.innerText = "Back to the Bank"
+                if(index == 1){
+                    btn1.classList.add("hidden")
                 }
-                if (index != pages.length - 2) {
-                    btn2.innerText = "Proceed"
+                if(index == 2){
+                    btn3.classList.remove("hidden")
+                }
+                else{
+                    btn3.classList.add("hidden")
                 }
             }
         })
@@ -207,17 +212,71 @@ window.addEventListener("load", () => {
                 pages[index].classList.remove("hidden");
                 processItem[index - 1].classList.add("bg-primary", "text-light")
                 window.scrollTo(0, 0)
-                if (index != 1) {
-                    btn1.innerText = "Back"
+                if(index > 1){
+                    btn1.classList.remove("hidden")
                 }
-                if (index == pages.length - 2) {
+                if(index == 2){
+                    btn3.classList.remove("hidden")
+                }
+                else{
+                    btn3.classList.add("hidden")
+                }
+                if(index == pages.length-2){
                     btn2.innerText = "Submit"
                 }
             }
-            if(index == pages.length - 2){
+            else if(index == pages.length - 2){
                 window.location.href = "Confirmation.html"
             }
         })
+        btn3.addEventListener("click",(e) =>{
+            e.stopPropagation()
+            window.location.href = "Pending.html"
+        })
+        // let pages = document.querySelectorAll(".page");
+        // let processItem = document.querySelectorAll(".process-item")
+        // console.log(processItem)
+        // let index = 1;
+        // let btn1 = document.getElementById("btn1")
+        // let btn2 = document.getElementById("btn2")
+        // btn1.addEventListener("click", (e) => {
+        //     window.scrollTo(0, 0)
+        //     if (index != 1) {
+        //         pages[index].classList.add("hidden");
+        //         processItem[index - 1].classList.remove("bg-primary", "text-light")
+        //         index--;
+        //         pages[index].classList.remove("hidden");
+        //         processItem[index - 1].classList.add("bg-primary", "text-light")
+        //         window.scrollTo(0, 0)
+        //         if (index == 1) {
+        //             btn1.innerText = "Back to the Bank"
+        //         }
+        //         if (index != pages.length - 2) {
+        //             btn2.innerText = "Proceed"
+        //         }
+        //     }
+        // })
+        // btn2.addEventListener("click", (e) => {
+        //     window.scrollTo(0, 0)
+        //     if (index < pages.length - 2) {
+        //         pages[index].classList.add("hidden");
+        //         processItem[index - 1].classList.remove("bg-primary", "text-light")
+        //         if(index == pages.length - 2){
+        //             window.location.href = "Confirmation.html"
+        //         }
+        //         index++;
+        //         pages[index].classList.remove("hidden");
+        //         processItem[index - 1].classList.add("bg-primary", "text-light")
+        //         window.scrollTo(0, 0)
+        //         if (index != 1) {
+        //             btn1.innerText = "Back"
+        //         }
+        //         if (index == pages.length - 2) {
+        //             btn2.innerText = "Submit"
+        //         }
+        //     }
+            
+        // })
 
         let clearOnceFeedBackRow = document.getElementById("clearOnceFeedBackRow")
         let clearOnceFeedBackBtn = document.getElementById("clearOnceFeedBackBtn")

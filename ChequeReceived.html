@@ -41,9 +41,9 @@
 
 </head>
 
-<body>
+<body id="chequereceived">
     <nav>
-        <a href="./"><img src="./media/bvs.png" id="upper-logo" style="width:100px;" /></a>
+        <a href="index.html"><img src="./media/bvs.png" id="upper-logo" style="width:100px;" /></a>
     </nav>
     <section class="main-container">
         <!------------------------------------------------------------>
@@ -429,9 +429,291 @@
                     </table>
                 </div>
             </div>
+            <div class="row mt-5 mb-5">
+                <div class="row mt-3 mb-5 d-flex justify-content-between align-items-center">
+                    <div class="col-5 d-flex align-items-center justify-content-between ">
+                        <header class="text-primary text-uppercase fs-1 w-automr-5">Cheque Number</header>
+                        <div class=" ml-5 col-5">
+                            <input type="text" class="fs-3 ml-5  pt-1 pb-1 w-100 " value="123456" disabled />
+                            <div class="p-1 mt-1 bg-primary ml-1   rounded-pill fw-light horizontal-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row col-10 mt-4 m-auto">
+                    <div class="col-3 fs-3">Sender Bank</div>
+                    <div class="col-1"></div>
+                    <div class="col-3 fs-3">Sender Bank Branch</div>
+                    <div class="col-1"></div>
+                    <div class="col-3 fs-3">Beneficiary Name</div>
+                </div>
+                <div class="row col-10 m-auto">
+                    <div class="col-3 fs-3">
+                        <div class="position-relative ml-5">
+                            <div class="row p-0 m-0 d-flex justify-content-between align-items-center">
+                                <input type="text" class="fs-3 p-0 pt-1 pb-1 border-0 position-r bg-transparent col-9"
+                                    style="outline:none;" value="Al-Ahly" disabled/>
+                                <i
+                                    class="fa-solid fa-magnifying-glass fs-3 w-15 col-2 d-flex align-items-center justify-content-end p-0"></i>
+                            </div>
+                            <div class="row m-0 p-0">
+                                <div class="p-1 mt-1 bg-primary rounded-pill fw-light horizontal-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-3 fs-3">
+                        <div class="position-relative ml-5">
+                            <div class="row p-0 m-0 d-flex justify-content-between align-items-center">
+                                <input type="text" class="fs-3 p-0 pt-1 pb-1 border-0 position-r bg-transparent col-9"
+                                    style="outline:none;" value="Al-Manial" disabled/>
+                            </div>
+                            <div class="row m-0 p-0">
+                                <div class="p-1 mt-1 bg-primary rounded-pill fw-light horizontal-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-3 fs-3">
+                        <div class="position-relative ml-5">
+                            <div class="row p-0 m-0 d-flex justify-content-between align-items-center">
+                                <input type="text" class="fs-3 p-0 pt-1 pb-1 border-0 position-r bg-transparent col-9"
+                                    style="outline:none;" value="Mahmoud Al-Dardir" disabled/>
+                            </div>
+                            <div class="row m-0 p-0">
+                                <div class="p-1 mt-1 bg-primary rounded-pill fw-light horizontal-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row col-10 mt-5 m-auto">
+                    <div class="col-3 fs-3">Currency</div>
+                    <div class="col-1"></div>
+                    <div class="col-3 fs-3">Amount</div>
+                    <div class="col-1"></div>
+                    <div class="col-3 fs-3">Is Endorsed</div>
+                </div>
+                <div class="row col-10 m-auto">
+                    <div class="col-3 fs-3">
+                        <div class="row p-0 m-0 d-flex justify-content-between align-items-center">
+                            <input type="text"
+                                class="fs-3 p-0 pt-1 pb-1 border-0 position-r bg-transparent col-9 list-header"
+                                style="outline:none; caret-color: transparent; " value="EGP" />
+                            <i
+                                class="fa-solid fa-chevron-down fs-3 w-15 col-2 d-flex align-items-center justify-content-end p-0"></i>
+                        </div>
+                        <div class="row m-0 p-0">
+                            <div class="p-1 mt-1 bg-primary rounded-pill fw-light horizontal-line"></div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-3 fs-3">
+                        <div class="position-relative ml-5">
+                            <div class="row p-0 m-0 d-flex justify-content-between align-items-center">
+                                <input type="text" class="fs-3 p-0 pt-1 pb-1 border-0 position-r bg-transparent col-9"
+                                    style="outline:none;" id="amount1" value="10000" />
+                            </div>
+                            <div class="row m-0 p-0">
+                                <div class="p-1 mt-1 bg-primary rounded-pill fw-light horizontal-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-3 fs-3">
+                        YES
+                    </div>
+                </div>
+                <div class="row col-10 mt-5 m-auto">
+                    <div class="col-3 fs-3">On Account</div>
+                </div>
+                <div class="row col-10 m-auto">
+                    <div class="col-3 fs-3">
+                        <div class="position-relative ml-5 list">
+                            <div class="row p-0 m-0 d-flex justify-content-between align-items-center">
+                                <input type="text"
+                                    class="fs-3 p-0 pt-1 pb-1 border-0 position-r bg-transparent col-9 list-header"
+                                    style="outline:none; caret-color: transparent; " />
+                                <i
+                                    class="fa-solid fa-chevron-down fs-3 w-15 col-2 d-flex align-items-center justify-content-end p-0"></i>
+                            </div>
+                            <div class="row m-0 p-0">
+                                <div class="p-1 mt-1 bg-primary rounded-pill fw-light horizontal-line"></div>
+                            </div>
+                            <div class="row m-0 p-0">
+                                <div class="list-body position-absolute bg-light w-100 p-0 m-0 hidden">
+                                    <div class="fs-3 border-bottom p-1 pt-2 pb-2 text-capitalize bg-light list-item">
+                                        12345678
+                                    </div>
+                                    <div class="fs-3 border-bottom p-1 pt-2 pb-2 text-capitalize bg-light list-item">
+                                        87654321
+                                    </div>
+                                    <div class="fs-3 border-bottom p-1 pt-2 pb-2 text-capitalize bg-light list-item">
+                                        13579135
+                                    </div>
+                                    <div class="fs-3 border-bottom p-1 pt-2 pb-2 text-capitalize bg-light list-item">
+                                        24680246
+                                    </div>
+                                    <div class="fs-3 border-bottom p-1 pt-2 pb-2 text-capitalize bg-light list-item">
+                                        13246578
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-3 fs-3">
+                        <div class="position-relative ml-5">
+                            <button
+                                class="z-100 w-auto m-2 bg-light border border-primary text-primary fs-3 p-5 pt-2 pb-2 rounded-pill"
+                                id="accountCheck">Check Status</button>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-3 fs-3">
+                        <div class="position-relative ml-5 text-success hidden">
+                            Active Account
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row mt-5">
+                <div class="row">
+                    <header class="text-primary text-uppercase fs-1 w-automr-5">Cheque Documents</header>
+                </div>
+                <div class="row">
+                    <table class="col-10 mt-5 m-auto" id="cheque-document">
+                        <tr>
+                            <th class="fs-3 p-4 text-center">Doc. Type</th>
+                            <th class="fs-3 p-4 text-center">Doc. Name</th>
+                            <th class="fs-3 p-4 text-center border-right-0"></th>
+                            <th class="fs-3 p-4 text-center"></th>
+                        </tr>
+                        <tr>
+                            <td class="fs-4 p-3 text-center">Front CCITT Image</td>
+                            <td class="fs-4 p-3 text-center">17 - 11 - 22</td>
+                            <td class="fs-4 p-3 text-center border-right-0">
+                                <button
+                                    class="download rounded-circle border border-2 border-success fs-4 bg-transparent"
+                                    style="width:3rem;height:3rem">
+                                    <i class="fa-solid fa-download text-success"></i>
+                                </button>
+                            </td>
+                            <td class="fs-4 p-3 text-center">
+                                <button class="uncheck rounded-circle border border-2  border-primary bg-transparent"
+                                    style="width:3rem;height:3rem">
+                                    <i class="fa-solid fa-eye text-primary"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fs-4 p-3 text-center">Back CCITT Image</td>
+                            <td class="fs-4 p-3 text-center">17 - 11 - 22</td>
+                            <td class="fs-4 p-3 text-center border-right-0">
+                                <button
+                                    class="download rounded-circle border border-2 border-success fs-4 bg-transparent"
+                                    style="width:3rem;height:3rem">
+                                    <i class="fa-solid fa-download text-success"></i>
+                                </button>
+                            </td>
+                            <td class="fs-4 p-3 text-center">
+                                <button class="uncheck rounded-circle border border-2  border-primary bg-transparent"
+                                    style="width:3rem;height:3rem">
+                                    <i class="fa-solid fa-eye text-primary"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fs-4 p-3 text-center">Front JPEG Image</td>
+                            <td class="fs-4 p-3 text-center">17 - 11 - 22</td>
+                            <td class="fs-4 p-3 text-center border-right-0">
+                                <button
+                                    class="download rounded-circle border border-2 border-success fs-4 bg-transparent"
+                                    style="width:3rem;height:3rem">
+                                    <i class="fa-solid fa-download text-success"></i>
+                                </button>
+                            </td>
+                            <td class="fs-4 p-3 text-center">
+                                <button class="uncheck rounded-circle border border-2  border-primary bg-transparent"
+                                    style="width:3rem;height:3rem">
+                                    <i class="fa-solid fa-eye text-primary"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fs-4 p-3 text-center">Front UV Image </td>
+                            <td class="fs-4 p-3 text-center">17 - 11 - 22</td>
+                            <td class="fs-4 p-3 text-center border-right-0">
+                                <button
+                                    class="download rounded-circle border border-2 border-success fs-4 bg-transparent"
+                                    style="width:3rem;height:3rem">
+                                    <i class="fa-solid fa-download text-success"></i>
+                                </button>
+                            </td>
+                            <td class="fs-4 p-3 text-center">
+                                <button class="uncheck rounded-circle border border-2  border-primary bg-transparent"
+                                    style="width:3rem;height:3rem">
+                                    <i class="fa-solid fa-eye text-primary"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+
+
+            </div>
+            <div class="row">
+                <div class="row mt-5">
+                    <header class="text-primary text-uppercase fs-1 w-automr-5 mb-5">Supporting Documents
+                    </header>
+                </div>
+                <div class="row col-10 m-auto">
+                    <table class="col-10 mt-5 m-auto" id="cheque-supporting-document">
+                        <tr>
+                            <th class="fs-3 p-4 text-center">Doc. Name</th>
+                            <th class="fs-3 p-4 text-center border-right-0"></th>
+                            <th class="fs-3 p-4 text-center"></th>
+                        </tr>
+                        <tr>
+                            <td class="fs-4 p-3 text-center">17 - 1 - 22</td>
+                            <td class="fs-4 p-3 text-center border-right-0">
+                                <button
+                                    class="download rounded-circle border border-2 border-success fs-4 bg-transparent"
+                                    style="width:3rem;height:3rem">
+                                    <i class="fa-solid fa-download text-success"></i>
+                                </button>
+                            </td>
+                            <td class="fs-4 p-3 text-center">
+                                <button class="uncheck rounded-circle border border-2  border-primary bg-transparent"
+                                    style="width:3rem;height:3rem">
+                                    <i class="fa-solid fa-eye text-primary"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fs-4 p-3 text-center">17 - 2 - 22</td>
+                            <td class="fs-4 p-3 text-center border-right-0">
+                                <button
+                                    class="download rounded-circle border border-2 border-success fs-4 bg-transparent"
+                                    style="width:3rem;height:3rem">
+                                    <i class="fa-solid fa-download text-success"></i>
+                                </button>
+                            </td>
+                            <td class="fs-4 p-3 text-center">
+                                <button class="uncheck rounded-circle border border-2  border-primary bg-transparent"
+                                    style="width:3rem;height:3rem">
+                                    <i class="fa-solid fa-eye text-primary"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
             <div class="row">
                 <div class="row mt-5 fs-3 text-primary">
-                    Total Number of cheques : 1
+                    Total Number of cheques : 2
                 </div>
                 <div class="row fs-3 text-primary">
                     Total Amount : 10000
